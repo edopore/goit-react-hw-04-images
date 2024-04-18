@@ -27,7 +27,7 @@ function App() {
     setQuery(event.target.searchFormInput.value);
     setPage(1);
     setLoader(true);
-    const images = await getImages(query);
+    const images = await getImages(event.target.searchFormInput.value);
     setImagearray([...images]);
     setLoader(false);
   }
